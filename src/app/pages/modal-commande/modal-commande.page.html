@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Annuler</ion-button>
+    </ion-buttons>
+    <ion-title>COMMANDE</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Confirmer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+      <ion-input [(ngModel)]="nbrPizzas" type="number" label="Nombre de pizzas" label-placement="floating" fill="outline" placeholder="Saisir le nombre de pizzas"></ion-input><br>
+      <ion-input [(ngModel)]="adresse" label="Adresse de livraison" label-placement="floating" fill="outline" placeholder="Saisir l'adresse de livraison"></ion-input><br>
+</ion-content>

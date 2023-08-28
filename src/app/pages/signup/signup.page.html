@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login" text="Connexion" style="color: rgb(0, 0, 0);"></ion-back-button>
+    </ion-buttons>
+    <ion-title >Home Delivery Pizzas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true">
+  <div class="background-container">
+  <ion-card color="">
+    <ion-card-header>
+      <ion-card-title>
+        <img src="../../../assets/img/Logopizza.jpg" alt="" srcset="">
+      </ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+
+  <ion-card-content>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <ion-input formControlName ="fullname" label="Nom complet" label-placement="floating" fill="outline" placeholder="Saisir le nom complet" required></ion-input><br>
+            <ion-input formControlName ="email" label="Adresse email" label-placement="floating" fill="outline" placeholder="Saisir l'email" required></ion-input><br>
+            <ion-input  type="password" formControlName ="password" label="Mot de passe" label-placement="floating" fill="outline" placeholder="Saisir le mot de passe" required></ion-input><br>
+            <ion-input  type="password" formControlName ="password_confirm" label="Mot de passe de confirmation" label-placement="floating" fill="outline" placeholder="Confirmer le mot de passe" required=""></ion-input><br>
+            <ion-input  type="number" formControlName ="tel" label="Numéro de téléphone" label-placement="floating" fill="outline" placeholder="Confirmer le numéro de téléphone" required=""></ion-input><br>
+            <br>
+        <ion-button [disabled]="signupForm.invalid"  type="submit" color="success"  expand="block">S'inscrire</ion-button>
+        <ion-button fill="outline"  color="danger" href="/login"  name="" expand="block">
+          Se connecter
+       </ion-button>
+      </form>
+</ion-card-content>

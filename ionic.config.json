@@ -1,0 +1,7 @@
+{
+  "name": "home-delivery-pizzas-front-end",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home Delivery Pizzas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  [fullscreen]="true">
+  <div class="background-container">
+  <ion-card color="">
+    <ion-card-header>
+      <ion-card-title>
+        <img src="../../../assets/img/Logopizza.jpg" alt="" srcset="">
+      </ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <ion-input formControlName ="email" label="Adresse email" label-placement="floating" fill="outline" placeholder="Saisir l'email"></ion-input><br>
+                <ion-input  type="password" formControlName ="password" label="Mot de passe" label-placement="floating" fill="outline" placeholder="Saisir le mot de passe"></ion-input>
+            <br>
+            <ion-button  type="submit" color="success" name="Se connecter" expand="block">Se connecter</ion-button>
+            <ion-button fill="outline"  color="danger" href="/signup"  name="" expand="block">
+              S'inscrire
+           </ion-button>
+          </form>
+
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
